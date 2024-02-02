@@ -21,11 +21,6 @@ public class restart : MonoBehaviour
     }
     public void Restart()
     {
-        int length = _spawnerPipeList.Count;
-        for(int i = 0; i < length; i++)
-        {
-            _spawnerPipeList[i].GetComponent<pipeMove>().KillThisPipe();
-        }
         Spawner.GetComponent<pipeSpawn>().spawnList.Clear();
         floppy.GetComponent<Floppy>().isDead = false;
         floppy.GetComponent<pointCounter>().points = 0;
